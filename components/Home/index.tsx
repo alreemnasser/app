@@ -35,13 +35,13 @@ function getReply(text){
 
   const headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer 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'
+    'Authorization': 'Bearer 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'
   }
-  console.log("request text","I am an astronaut. I want to "+props.selectedPrompt+" "+ text)
+  console.log("request text","I am an astronaut. "+ text)
 
   axios.post("https://api.openai.com/v1/completions", {
     "model": "text-davinci-003",
-    "prompt":"I am an astronaut. I want to "+props.selectedPrompt+"  "+ text,
+    "prompt":"I am an astronaut.  " + text,
     "max_tokens": 4000,
     "temperature": 1.0
   },{headers:headers}).then((res)=>{
@@ -54,7 +54,7 @@ setAnimating(false)
 
 
   }).catch((error)=>{
-  alert("something went wrong ")});
+  alert("something went wrong "+error)});
 
 
 }
