@@ -35,7 +35,7 @@ function getReply(text){
 
   const headers = {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer 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'
+    'Authorization': 'Bearer '+process.env.OPEN_API_KEY
   }
   console.log("request text","I am an astronaut. "+ text)
 
